@@ -144,14 +144,14 @@ CREATE INDEX IF NOT EXISTS idx_file_uploads_user_id ON file_uploads(user_id);
 CREATE TABLE IF NOT EXISTS audit_logs (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     user_id UUID REFERENCES users(user_id),
-    action VARCHAR NOT NULL, -- Unified with code
-    resource VARCHAR,        -- Unified with code
+    action VARCHAR NOT NULL, 
+    resource VARCHAR,        
     resource_id UUID,
     http_method VARCHAR,
     endpoint VARCHAR,
     request_params JSONB,
-    status_code INTEGER,     -- Unified with code (response_status vs status_code)
-    status VARCHAR,          -- Added to match some code usage
+    status_code INTEGER,     
+    status VARCHAR,        
     success BOOLEAN,
     error_message TEXT,
     ip_address VARCHAR,
