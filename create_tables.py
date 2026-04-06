@@ -5,11 +5,11 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Database parameters from user
-# postgresql://postgres:Crmproject@123@db.reslibwqwawflgpdohmw.supabase.co:5432/postgres
+
 DB_CONFIG = {
     "dbname": "postgres",
     "user": "postgres",
-    "password": "Crmproject@123",
+    "password": "",
     "host": "db.reslibwqwawflgpdohmw.supabase.co",
     "port": "5432"
 }
